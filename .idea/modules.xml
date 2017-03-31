@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Kombi.iml" filepath="$PROJECT_DIR$/Kombi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kombi/kombi.iml" filepath="$PROJECT_DIR$/kombi/kombi.iml" />
+    </modules>
+  </component>
+</project>
