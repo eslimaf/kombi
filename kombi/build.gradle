@@ -1,5 +1,33 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'kombi'
+
+    publishedGroupId = 'com.eslimaf'
+    libraryName = 'Kombi'
+    artifact = 'kombi'
+
+    libraryDescription = 'Lightweight reusable message bus with Rx'
+
+    issuesUrl = 'https://github.com/eslimaf/kombi/issues'
+    siteUrl = 'https://github.com/eslimaf/kombi'
+    gitUrl = 'https://github.com/eslimaf/kombi.git'
+    githubRepository = 'eslimaf/kombi'
+
+    libraryVersion = project.hasProperty('releaseVersion') ?
+            project.releaseVersion : "0.1.0"
+
+    developerId = 'eslimaf'
+    developerName = 'Evandro Lima'
+    developerEmail = 'eslimaf@gmail.com'
+
+    licenseName = 'The MIT License'
+    licenseUrl = 'https://opensource.org/licenses/MIT'
+    allLicenses = ["MIT"]
+}
+
+
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
@@ -7,14 +35,17 @@ android {
         minSdkVersion 19
         targetSdkVersion 25
         versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        versionName  libraryVersion
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    lintOptions {
+        abortOnError false
     }
 }
 
@@ -27,3 +58,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.3.0'
     testCompile 'junit:junit:4.12'
 }
+
+apply from: "${rootDir.getPath()}/publish.gradle"
