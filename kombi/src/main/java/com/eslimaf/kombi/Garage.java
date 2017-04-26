@@ -1,7 +1,5 @@
 package com.eslimaf.kombi;
 
-import android.support.annotation.NonNull;
-
 import java.util.HashMap;
 
 /**
@@ -9,7 +7,6 @@ import java.util.HashMap;
  */
 public class Garage {
     private static Garage sInstance;
-    @NonNull
     private HashMap<String, RxKombi> mInstanceMap = new HashMap<>();
 
     private Garage() {
