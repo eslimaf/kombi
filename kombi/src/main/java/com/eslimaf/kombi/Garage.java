@@ -16,11 +16,11 @@ public class Garage {
     }
 
     /**
-     * Gets instance.
+     * Get instance.
      *
      * @return the instance of Garage
      */
-    public static synchronized Garage getsInstance() {
+    public static synchronized Garage getInstance() {
         if (sInstance == null) {
             sInstance = new Garage();
         }
